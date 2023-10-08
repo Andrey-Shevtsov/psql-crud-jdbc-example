@@ -30,7 +30,8 @@ public class AppTest {
                 .setTable("test")
                 .setPayload(map)
                 .build();
-        assertEquals(legacyQuery.getQueryString(),
-                "INSERT INTO test (id, name, lastName) VALUES (\'oers31sf1fgld34\', \'John\', \'Svetov\');");
+        assertEquals("INSERT INTO test (id, name, lastName) VALUES (\'oers31sf1fgld34\', \'John\', \'Svetov\');",
+                legacyQuery.getQueryString()
+        );
     }
 }

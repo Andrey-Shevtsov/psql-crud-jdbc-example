@@ -1,1 +1,5 @@
 pm\devshevtsov\application\App.class
+pm\devshevtsov\application\jdbc\connection\CustomJdbcConnector.class
+pm\devshevtsov\application\jdbc\query\QueryBuilder.class
+pm\devshevtsov\application\jdbc\BuilderDirector.class
+pm\devshevtsov\application\jdbc\query\LegacyQuery.class
