@@ -1,8 +1,6 @@
 package pm.devshevtsov.application.jdbc.query;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class QueryBuilder {
@@ -34,17 +32,17 @@ public class QueryBuilder {
             case "INSERT":
                 Map<String, String> payload = query.getPayload();
                 Set<Map.Entry<String, String>> entrySet = payload.entrySet();
-                List<String> paramsList = entrySet.stream()
-                        .map(Map.Entry::getKey)
-                        .toList();
-                List<String> valuesList = entrySet.stream()
-                        .map(Map.Entry::getValue)
-                        .toList();
                 String params = entrySet.stream()
                         .map(Map.Entry::getKey)
-                        .collect(Collectors.joining(","));
+                        .collect(Collectors.joining(", "));
+                List<String> values = entrySet.stream()
+                        .map(Map.Entry::getValue)
+                        .toList();
+                String fmtValues = values.stream()
+                        .map(s -> "\'" + s + "\'")
+                        .collect(Collectors.joining(", "));
                 q = "INSERT INTO " + query.getTableName() + " (" + params + ") " +
-                        "VALUES (" + valuesList + ");";
+                        "VALUES (" + fmtValues + ");";
                 break;
         }
         query.setQueryString(q);

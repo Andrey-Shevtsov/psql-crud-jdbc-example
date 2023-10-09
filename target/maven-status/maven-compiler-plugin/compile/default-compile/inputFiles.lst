@@ -1,1 +1,5 @@
 C:\Projects\psql-crud-jdbc-example\src\main\java\pm\devshevtsov\application\App.java
+C:\Projects\psql-crud-jdbc-example\src\main\java\pm\devshevtsov\application\jdbc\BuilderDirector.java
+C:\Projects\psql-crud-jdbc-example\src\main\java\pm\devshevtsov\application\jdbc\query\LegacyQuery.java
+C:\Projects\psql-crud-jdbc-example\src\main\java\pm\devshevtsov\application\jdbc\query\QueryBuilder.java
+C:\Projects\psql-crud-jdbc-example\src\main\java\pm\devshevtsov\application\jdbc\connection\CustomJdbcConnector.java
