@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: pm.devshevtsov.application.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.105 s <<< FAILURE! - in pm.devshevtsov.application.AppTest
-pm.devshevtsov.application.AppTest.buildBasicQuery  Time elapsed: 0.061 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <INSERT INTO test (id, name, lastName) VALUES ('oers31sf1fgld34', 'John', 'Svetov');> but was: <INSERT INTO test (lastName,name,id) VALUES ([Svetov, John, oers31sf1fgld34]);>
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.074 s <<< FAILURE! - in pm.devshevtsov.application.AppTest
+pm.devshevtsov.application.AppTest.buildBasicQuery  Time elapsed: 0.041 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <INSERT INTO test (id, name, lastName) VALUES ('oers31sf1fgld34', 'John', 'Svetov');> but was: <INSERT INTO test (lastName, name, id) VALUES ('Svetov', 'John', 'oers31sf1fgld34');>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
-	at pm.devshevtsov.application.AppTest.buildBasicQuery(AppTest.java:33)
+	at pm.devshevtsov.application.AppTest.buildBasicQuery(AppTest.java:36)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
